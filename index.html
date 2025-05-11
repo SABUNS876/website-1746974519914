@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Modern Neon Portfolio</title>
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #121212 0%, #1c1c1c 100%);
+    color: #eee;
+    overflow-x: hidden;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .container {
+    max-width: 960px;
+    width: 100%;
+    background: #111;
+    border-radius: 16px;
+    box-shadow:
+      0 0 10px #00fff7,
+      0 0 30px #00fff7 inset;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00fff7;
+    text-shadow:
+      0 0 10px #00fff7,
+      0 0 30px #00fff7;
+    margin: 0;
+    letter-spacing: 0.1em;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #90f2ff;
+    text-shadow: 0 0 8px #22d8f7;
+  }
+  p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  nav a {
+    color: #00fff7;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00fff7;
+  }
+  nav a:hover, nav a:focus {
+    background: #00fff7;
+    color: #121212;
+    box-shadow:
+      0 0 12px #00fff7,
+      0 0 20px #00fff7;
+    outline: none;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .project-card {
+    background: #222;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow:
+      0 0 8px #078a8a,
+      0 0 18px #00fff7 inset;
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 20px #00fff7,
+      0 0 30px #00fff7 inset;
+  }
+  .project-title {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #00f3ff;
+    text-shadow: 0 0 8px #0ff;
+  }
+  .project-desc {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 3rem;
+  }
+  .battery-status {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    background: #111;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    color: #00fff7;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1rem;
+    box-shadow:
+      0 0 9px #00fff7,
+      0 0 15px #00fff7 inset;
+    user-select: none;
+  }
+  .footer-neon {
+    margin-top: 1rem;
+    color: #00fff7;
+    text-shadow:
+      0 0 8px #00fff7,
+      0 0 20px #00fff7;
+  }
+  /* Scrollbar styles for modern look */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00fff7;
+    border-radius: 4px;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    nav {
+      gap: 1rem;
+    }
+    .container {
+      padding: 2rem 1.5rem;
+    }
+    .project-card {
+      padding: 1rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <div class="battery-status" aria-live="polite" aria-label="Battery status">Battery: Checking...</div>
+    <header>
+      <h1>Neon Luxe Portfolio</h1>
+      <nav role="navigation" aria-label="Primary navigation">
+        <a href="#about" tabindex="0">About Me</a>
+        <a href="#projects" tabindex="0">Projects</a>
+        <a href="#contact" tabindex="0">Contact</a>
+      </nav>
+    </header>
+    <section id="about" tabindex="0">
+      <h2>About Me</h2>
+      <p>Impeccably crafting digital experiences with a smooth and elegant flair, powered by neon aesthetics and modern design principles. Welcome to a portfolio that breathes luxury and sophistication.</p>
+    </section>
+    <section id="projects" tabindex="0">
+      <h2>Highlighted Projects</h2>
+      <div class="projects">
+        <article class="project-card" tabindex="0" aria-label="Project Neon Dashboard">
+          <h3 class="project-title">Neon Dashboard</h3>
+          <p class="project-desc">A premium dashboard interface featuring real-time data with luminous neon highlights and silky smooth interactions.</p>
+        </article>
+        <article class="project-card" tabindex="0" aria-label="Project Luxe Storefront">
+          <h3 class="project-title">Luxe Storefront</h3>
+          <p class="project-desc">Elegant e-commerce platform designed with neon accents and user-friendly experience to convey prestige and quality.</p>
+        </article>
+        <article class="project-card" tabindex="0" aria-label="Project Smooth Stream">
+          <h3 class="project-title">Smooth Stream</h3>
+          <p class="project-desc">A streaming app with clean neon visuals, fluid animations, and refined usability focused on premium viewers.</p>
+        </article>
+      </div>
+    </section>
+    <section id="contact" tabindex="0">
+      <h2>Contact Me</h2>
+      <p>Interested in collaborating or want to know more? Drop me a message!</p>
+      <form id="contact-form" aria-label="Contact form" autocomplete="off">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name" /><br /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Hello, I would like to..."></textarea><br /><br />
+        <button type="submit" aria-label="Send message">Send</button>
+      </form>
+      <p id="form-status" role="alert" aria-live="assertive" style="margin-top:0.5rem;color:#00ffcc; font-weight:bold;"></p>
+    </section>
+    <footer>
+      <p class="footer-neon">© 2024 Neon Luxe Portfolio. All rights reserved.</p>
+    </footer>
+  </div>
+<script>
+  // Battery API to get battery status if supported
+  const batteryStatusElement = document.querySelector('.battery-status');
+
+  function updateBatteryStatus(battery) {
+    const levelPercent = Math.round(battery.level * 100) + '%';
+    let chargingText = battery.charging ? ' (Charging ⚡)' : '';
+    batteryStatusElement.textContent = `Battery: ${levelPercent}${chargingText}`;
+    batteryStatusElement.style.color = battery.level > 0.2 ? '#00fff7' : '#ff0033';
+    batteryStatusElement.style.textShadow = battery.level > 0.2 ? '0 0 10px #00fff7' : '0 0 12px #ff0033';
+  }
+
+  if ('getBattery' in navigator) {
+    navigator.getBattery().then(battery => {
+      updateBatteryStatus(battery);
+      battery.addEventListener('levelchange', () => updateBatteryStatus(battery));
+      battery.addEventListener('chargingchange', () => updateBatteryStatus(battery));
+    });
+  } else {
+    // If Battery API is not supported
+    batteryStatusElement.textContent = 'Battery info not available';
+    batteryStatusElement.style.color = '#555';
+    batteryStatusElement.style.textShadow = 'none';
+  }
+
+  // Contact form backend emulation (mock)
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    formStatus.textContent = 'Sending...';
+    const formData = {
+      name: contactForm.name.value.trim(),
+      email: contactForm.email.value.trim(),
+      message: contactForm.message.value.trim(),
+    };
+    // Simulate backend POST request (mock)
+    setTimeout(() => {
+      formStatus.textContent = `Thanks, ${formData.name}! Your message has been received.`;
+      formStatus.style.color = '#00ffcc';
+      contactForm.reset();
+    }, 1500);
+  });
+</script>
+</body>
+</html>
+
+```
